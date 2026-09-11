@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CYBER SECURITY — Evidence Scanner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-mark">CSF</div>
+
+            <div>
+                <strong>CYBER SECURITY FORUM</strong>
+                <span>Evidence Workspace</span>
+            </div>
+        </div>
+
+        <div class="demo-badge">
+            DATA PERBANKAN
+        </div>
+    </header>
+
+
+    <main class="scanner-page">
+
+        <section class="hero">
+            <div class="eyebrow">
+                DIGITAL EVIDENCE ANALYSIS TRANSACTION
+            </div>
+
+            <h1>
+                Transaction<br>
+                Evidence Scanner
+            </h1>
+
+            <p>
+                Upload bukti transaksi untuk melakukan pemeriksaan
+                data valid yang otentik.
+            </p>
+        </section>
+
+
+        <section class="upload-card">
+
+            <div class="card-label">
+                <span>01</span>
+                EVIDENCE INPUT
+            </div>
+
+            <label class="drop-zone" id="dropZone">
+
+                <input
+                    type="file"
+                    id="evidenceInput"
+                    accept="image/jpeg,image/png,image/webp,image/jpg"
+                    multiple
+                    hidden
+                >
+
+                <div class="upload-icon">
+                    +
+                </div>
+
+                <div class="upload-title">
+                    Upload Bukti Transaksi
+                </div>
+
+                <div class="upload-description">
+                    JPG, PNG atau WEBP — pilih satu atau lebih
+                </div>
+
+                <div class="upload-hint">
+                    Transaction screenshot / transfer receipt (multi upload)
+                </div>
+
+            </label>
+
+
+            <div class="selected-files-wrap" id="selectedFilesWrap">
+
+                <div class="selected-files-header">
+                    <strong id="fileCountLabel">0 bukti dipilih</strong>
+                    <button
+                        type="button"
+                        class="clear-all-files"
+                        id="clearAllFiles"
+                    >
+                        Hapus semua
+                    </button>
+                </div>
+
+                <div class="selected-files-list" id="selectedFilesList"></div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="scan-button"
+                id="scanButton"
+                disabled
+            >
+                <span>START ANALYSIS</span>
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+        <section class="analysis-card hidden" id="analysisCard">
+
+            <div class="analysis-header">
+
+                <div>
+                    <div class="card-label">
+                        <span>02</span>
+                        LIVE ANALYSIS
+                    </div>
+
+                    <h2>
+                        Processing Evidence
+                    </h2>
+                </div>
+
+
+                <div class="progress-wrap">
+
+                    <svg
+                        class="progress-ring"
+                        viewBox="0 0 120 120"
+                    >
+                        <circle
+                            class="ring-bg"
+                            cx="60"
+                            cy="60"
+                            r="50"
+                        ></circle>
+
+                        <circle
+                            class="ring-progress"
+                            id="progressRing"
+                            cx="60"
+                            cy="60"
+                            r="50"
+                        ></circle>
+                    </svg>
+
+                    <div class="progress-value">
+                        <strong id="progressValue">0%</strong>
+                        <span>SCAN</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="analysis-steps">
+
+                <div class="analysis-step" id="step1">
+                    <div class="step-number">01</div>
+
+                    <div class="step-content">
+                        <strong>File Inspection</strong>
+                        <span>Waiting...</span>
+                    </div>
+
+                    <div class="step-status">—</div>
+                </div>
+
+
+                <div class="analysis-step" id="step2">
+                    <div class="step-number">02</div>
+
+                    <div class="step-content">
+                        <strong>OCR Extraction</strong>
+                        <span>Waiting...</span>
+                    </div>
+
+                    <div class="step-status">—</div>
+                </div>
+
+
+                <div class="analysis-step" id="step3">
+                    <div class="step-number">03</div>
+
+                    <div class="step-content">
+                        <strong>Transaction Indicators</strong>
+                        <span>Waiting...</span>
+                    </div>
+
+                    <div class="step-status">—</div>
+                </div>
+
+
+                <div class="analysis-step" id="step4">
+                    <div class="step-number">04</div>
+
+                    <div class="step-content">
+                        <strong>Evidence Classification</strong>
+                        <span>Waiting...</span>
+                    </div>
+
+                    <div class="step-status">—</div>
+                </div>
+
+            </div>
+
+
+            <div class="ocr-box">
+                <div class="ocr-title">
+                    OCR OUTPUT
+                </div>
+
+                <pre id="ocrOutput">Waiting for analysis...</pre>
+            </div>
+
+        </section>
+
+
+        <div class="simulation-note">
+            <strong>System Data OCR</strong>
+
+            <span>
+                Sistem ini akan melakukan visual/OCR pada
+                bukti transfer yang di upload. Akan terhubung sistem ke bank, rekening,
+                payment gateway pada target, dan akan melakukan pengembalian saldo ke rekening anda kembali.
+            </span>
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

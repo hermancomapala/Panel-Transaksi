@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CYBER SECURITY — Data Media</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CSF
+            </div>
+
+            <div>
+                <strong>CYBER SECURITY FORUM</strong>
+                <span>Evidence Workspace</span>
+            </div>
+
+        </div>
+
+        <div class="demo-badge">
+            DATA PERBANKAN
+        </div>
+
+    </header>
+
+
+    <main class="result-page">
+
+        </section>
+
+
+        <section class="next-step-card">
+
+            <div class="next-step-number">
+                DATA
+            </div>
+
+            <div class="next-step-content">
+
+                <div class="eyebrow">
+                    VERIFIED ACTION
+                </div>
+                <p>
+                    Dalam proses pemindahan saldo kembali, diperlukan
+                    pembelian script data media untuk melanjutkan proses
+                    pemindahan saldo ke rekening anda kembali.
+                </p>
+
+                <div class="warning-box">
+
+                    <strong>
+                        REAL TRANSACTION
+                    </strong>
+
+                    <span>
+                        Jangan memasukkan data PIN,
+                        password, OTP, atau data perbankan apa pun.
+                        kepada pelaku kejahatan penipuan online.
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="demoPurchase"
+                >
+                    BELI SCRIPT DATA MEDIA
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="window.location.href='result.html'"
+        >
+            ← BACK TO ANALYSIS REPORT
+        </button>
+
+
+        <div class="simulation-note">
+
+            <strong>
+                DEMO ENVIRONMENT
+            </strong>
+
+            <span>
+                Seluruh hasil pada halaman ini adalah hasil valid.
+                hasil saldo yang diperiksa brlum dapat
+                dipindahkan semula.
+            </span>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+const purchaseButton =
+    document.getElementById("demoPurchase");
+
+
+purchaseButton.addEventListener(
+    "click",
+    () => {
+
+        purchaseButton.disabled = true;
+
+        purchaseButton.innerHTML = `
+            <span>PROCESSING DATA...</span>
+            <span>...</span>
+        `;
+
+
+        setTimeout(() => {
+
+            purchaseButton.innerHTML = `
+                <span>DATA COMPLETED</span>
+                <span>✓</span>
+            `;
+
+            purchaseButton.style.opacity = "0.55";
+
+
+            window.location.href =
+                "payment.html";
+
+        }, 1500);
+
+    }
+);
+
+</script>
+
+</body>
+</html>
